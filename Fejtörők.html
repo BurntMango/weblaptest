@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alap Kapuk - Logikai Kapuk</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    
+    <header>
+        <nav id="navbar">
+            <div>
+                <a href="./index.html">Kezdőlap</a>
+                <a href="./index.html#alapkapu">Alap kapuk</a>
+                <a href="./index.html#nagyobbkapu">Nagyobb kapuk</a>
+                <a href="./Fejtörők.html">Fejtörők (ön most itt van)</a>
+                <a href="./Feladvány.html">Feladvány</a>
+            </div>
+            <button id="nagyobbbetu" aria-label="Akadálymentes nézet ki/be">
+                Akadálymentes nézet
+            </button>
+        </nav>
+        <div id="logo">
+            <img src="képek/KAPUK.png" alt="Kapuk logo">
+        </div>
+    </header>
+    <main>
+        <h1>Fejtörők</h1>
+        <h2>1. Fejtörő</h2>
+        <article class="fejtoro">
+            
+            <a href="képek/fejtoro1.png">
+                <img src="képek/fejtoro1.png" alt="Az első fejtörő ábrája, amelyen 2 bit bemenet, és 1 bit kimenet látható">
+            </a>
+    
+            <p>Hozza létre az XOR kaput, egy NAND, OR és AND kapu felhasználásával</p>
+            
+            <p>Összekötjuk a bemenet két bitjét egy NAND kapuoz, és egy OR kapuhoz. Majd 
+                ezeket össze AND-ezve megkapjuk azt a kaput, ami csak akkor ad 0 azaz Hamis 
+                eredményt, ha a bemenet mindkettő bite hamis</p>    
+            <video src="képek/XorGate.mp4" controls poster="képek/XorThumbnail.png"></video>
+            <aside>
+                <p> a videót youtube-on is megtalálhatod az alábbi linken:
+                    <a href="https://www.youtube.com/watch?v=6A_n_6i0e8M&list=PLK3XdWYpU2owghrV_YiN2rF_jl-QDW1Ss&index=8"> Videó</a> </p>
+            </aside>
+            </article>
+            
+
+        <h2>2. Fejtörő</h2>
+        <article class="fejtoro">
+            
+    
+            <a href="képek/fejtoro2.png">
+                <img src="képek/fejtoro2.png" alt="A második fejtörő ábrája, amelyen 4 bit bemenet, és 1 bit kimenet látható">
+            </a>
+    
+            <p>Maximum 3 komponensel, készítsünk egy olyan szerkezetet, ami csak akkor a 1-et, 
+                ha a bemenet 4 bitéből páratlan számú 1.</p>
+            <p>Kihasználjuk, hogy a XOR kapu csak akkor ad igazat, ha ő páratlan számú bitet kap 
+                (hiszen akkor igaz ha pontosan 1 Igat-at kap). Ha a 4 bitből 2-2-t párpsával XOR 
+                kapuhoz kötünk, és ezeknek a kimenetét is egy XOR kapuba vezetjünk, megkapjuk a 
+                megoldást</p>
+            <video src="képek/OddNumberOfSignals.mp4" height="600" width="500" controls poster="képek/OddThumbnail.png"></video>
+            <aside>
+                <p> a videót youtube-on is megtalálhatod az alábbi linken:
+                    <a href="https://www.youtube.com/watch?v=JdBOQ9UrcSQ&list=PLK3XdWYpU2owghrV_YiN2rF_jl-QDW1Ss&index=9"> Videó</a>
+                </p>
+            </aside>
+        </article>
+    
+        <p>Ezeket a videókat, és sok más érdekes videót az alábbi csatornán találhatod meg: <a href="https://www.youtube.com/@TuringCompleteGame">Csatorna</a></p>
+    
+    </main>
+    <footer>
+        <p>készítette: Krassói Péter Sámuel</p>
+    </footer>
+    <script src="nagyobbbetü.js"></script>
+</body>
+</html>
