@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alap Kapuk - Logikai Kapuk</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    
+    <header>
+        <nav id="navbar">
+            <div>
+                <a href="./index.html">Kezdőlap (ön most itt van)</a>
+                <a href="./index.html#alapkapu">Alap kapuk</a>
+                <a href="./index.html#nagyobbkapu">Nagyobb kapuk</a>
+                <a href="./Fejtörők.html">Fejtörők</a>
+                <a href="./Feladvány.html">Feladvány</a>
+            </div>
+            <button id="nagyobbbetu" aria-label="Akadálymentes nézet ki/be">
+                Akadálymentes nézet
+            </button>
+        </nav>
+        <div id="logo">
+            <img src="képek/KAPUK.png" alt="Kapuk logo">
+        </div>
+    </header>
+    <main>
+
+        <div id="alapkapu">
+            <h1>Alap Kapuk</h1>
+        </div>
+        
+        <p>A kapuk kontextusában az Igaz/Hamist, és az 1/0-t kölcsönös értelemben használjuk.</p>
+        
+        <article class="kapu">
+            <div class="kkep">
+                <img src="képek/NAND.png" alt="NAND kapu">
+            </div>
+            <div class="kleiras">
+                <h2>A NAND kapu a későbbi AND kapu tagadása (neve is: Not AND).</h2>
+                <p>Csak akkor ad 0-t, ha minden bemenet 1.</p>
+                <p>Minden más esetben a kimenet 1. Ez az egyik legfontosabb kapu, mert önmagában is képes bármely más logikai művelet megvalósítására.</p>
+            </div>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>A NAND B</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>T</td><td>T</td><td>F</td></tr>
+                        <tr><td>T</td><td>F</td><td>T</td></tr>
+                        <tr><td>F</td><td>T</td><td>T</td></tr>
+                        <tr><td>F</td><td>F</td><td>T</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+
+        <hr>
+
+        <article class="kapu">
+            <div class="kkep">
+                <img src="képek/NOT.png" alt="NOT kapu">
+            </div>
+            <div class="kleiras">
+                <h3>A NOT kapu egyetlen bemenettel rendelkezik, és annak logikai ellentétét adja ki.</h3>
+                <p>Ha a bemenet 1, a kimenet 0 lesz.</p>
+                <p>Ha a bemenet 0, a kimenet 1 lesz.</p>
+            </div>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>A</th>
+                            <th>Not A</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>T</td><td>F</td></tr>
+                        <tr><td>F</td><td>T</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+
+        <article class="kapu">
+            <div class="kkep">
+                <img src="képek/AND.png" alt="AND kapu">
+            </div>
+            <div class="kleiras">
+                <h3>Az AND kapu akkor ad 1-et, ha minden bemenet 1.</h3>
+                <p>Csak az (1,1) bemenetre ad vissza 1-et, ezzel a logikai "és" műveletet végzi el</p>
+            </div>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>A AND B</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>T</td><td>T</td><td>T</td></tr>
+                        <tr><td>T</td><td>F</td><td>F</td></tr>
+                        <tr><td>F</td><td>T</td><td>F</td></tr>
+                        <tr><td>F</td><td>F</td><td>F</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+
+        <article class="kapu">
+            <div class="kkep">
+                <img src="képek/NOR.png" alt="NOR kapu">
+            </div>
+            <div class="kleiras">
+                <h3>A NOR kapu a későbbi OR kapu ellentéte.</h3>
+                <p>Ha bármelyik bemenet 1, a kimenet 0 lesz.</p>
+                <p>Ez a „egyik sem igaz” feltételt valósítja meg.</p>
+            </div>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>A</th>
+                            <th>B</th>
+                            <th>A NOR B</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>T</td><td>T</td><td>F</td></tr>
+                        <tr><td>T</td><td>F</td><td>F</td></tr>
+                        <tr><td>F</td><td>T</td><td>F</td></tr>
+                        <tr><td>F</td><td>F</td><td>T</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </article>
+
+        <div id="nagyobbkapu">
+            <h1>Nagyobb (kiterjesztett) Kapuk</h1>
+        </div>
+
+        <article class="kapu">
+            <figure class="kkep">
+                <img src="képek/AND3bit.png" alt="3 bites AND kapu">
+                <figcaption>bővített AND gate</figcaption>
+            </figure>
+            <div class="kleiras">
+                <p>Az AND kaput ki tudjuk terjeszteni, úgy, hogy az 3 bitet fogajon.
+                    Ez tulajdonképpen elérhető két AND kapuval is: 2 bitet bevezetünk 
+                    egy 2 bites AND kapuba, majd a harmadik bitet valamint az első AND 
+                    kapunk eredményét bevezetjük egy új AND kapuba.</p>
+            </div>
+        </article>
+
+        <article class="kapu">
+            <figure class="kkep">
+                <img src="képek/OR3bit.png" alt="3 bites OR kapu">
+                <figcaption>bővített OR gate</figcaption>
+            </figure>
+            <div class="kleiras">
+                <p>Az OR kaput ki tudjuk terjeszteni, úgy, hogy az 3 bitet fogajon. 
+                    Ez tulajdonképpen elérhető két OR kapuval is, ugyanúgy, mint azt az 
+                    AND kapuval láthattuk.</p>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <p>készítette: Krassói Péter Sámuel</p>
+    </footer>
+    <script src="nagyobbbetü.js"></script>
+</body>
+</html>
